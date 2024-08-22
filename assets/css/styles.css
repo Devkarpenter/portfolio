@@ -241,17 +241,19 @@ img {
   align-items: center;
 }
 .about__subtitle {
-  margin-bottom:  
-  margin-right: auto; 
-  max-width: 800px; 
+  margin-bottom: var(--mb-2); /* Space below the subtitle */
+  margin-left: auto; /* Center align horizontally with auto margins */
+  margin-right: auto; /* Center align horizontally with auto margins */
+  max-width: 800px; /* Adjust max-width as needed */
 }
 
+
 .about__text {
-  margin-left: auto; 
-  margin-right: auto; 
-  max-width: 800px;
-  padding-left: 1rem; 
-  padding-right: 1rem; 
+  margin-left: auto; /* Center align horizontally with auto margins */
+  margin-right: auto; /* Center align horizontally with auto margins */
+  max-width: 800px; /* Adjust max-width as needed */
+  padding-left: 1rem; /* Optional padding for better readability */
+  padding-right: 1rem; /* Optional padding for better readability */
 }
 
 
