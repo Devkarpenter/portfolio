@@ -46,6 +46,7 @@ html {
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
@@ -329,7 +330,7 @@ img {
 }
 .work__img p {
   font-weight: 600;
-  margin-left: 90px;
+
   margin-top: 4px;
   height: 30px;
   font-size: 16px;
