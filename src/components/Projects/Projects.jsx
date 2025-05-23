@@ -10,7 +10,7 @@ function Projects() {
           <p className='pro-name'>Chat App</p>
         </a>
         <a href="https://school-list-app.vercel.app/" className="work__img">
-          <img src="src/assets/img/work6.jpg" alt="Edunify" />
+          <img src="./src/assets/img/work6.jpg" alt="Edunify" />
           <p className='pro-name'>Edunify School Management</p>
         </a>
         <a href="https://github.com/Devkarpenter/MERN-project" className="work__img">
