@@ -1,0 +1,79 @@
+/* Projects.css */
+
+.section {
+  padding: 4rem 2rem;
+}
+
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #00bcd4;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.work__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.work__img {
+  /* position: relative; */
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #222;
+  background-color: #fff;
+}
+
+.work__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.work__img p {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.work__img:hover {
+  transform: translateY(-8px);
+}
+
+.work__img:hover img {
+  transform: scale(1.05);
+}
+
+
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .work__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work__img p {
+    font-size: 1.2rem;
+  }
+}

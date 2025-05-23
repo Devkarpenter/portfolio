@@ -1,0 +1,127 @@
+/* Skills.css */
+
+
+.section-title::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #00bcd4;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.skills__subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+.skills__data {
+  margin-bottom: 1.5rem;
+}
+
+.skills__names {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skills__icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  color: #00bcd4;
+}
+
+.skills__name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #aba7a7;
+}
+
+.skills__bar {
+  position: relative;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skills__html::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 95%;
+  background-color: #00bcd4;
+  border-radius: 5px;
+  animation: fillBar 1s ease-in-out forwards;
+}
+
+.skills__css::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 85%;
+  background-color: #2196f3;
+  border-radius: 5px;
+  animation: fillBar 1s ease-in-out forwards;
+}
+
+.skills__js::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 65%;
+  background-color: #f0db4f;
+  border-radius: 5px;
+  animation: fillBar 1s ease-in-out forwards;
+}
+
+.skills__ux::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 85%;
+  background-color: #61dafb;
+  border-radius: 5px;
+  animation: fillBar 1s ease-in-out forwards;
+}
+
+.skills__percentage {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.skills__img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bar animation */
+@keyframes fillBar {
+  0% {
+    width: 0;
+  }
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .skills__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills__img {
+    max-width: 100%;
+  }
+}
