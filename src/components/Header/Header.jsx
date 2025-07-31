@@ -7,7 +7,7 @@ function Header() {
   const [activeLink, setActiveLink] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+  const sections = ['home', 'about', 'skills', 'Projects', 'contact'];
 
   useEffect(() => {
     const handleScroll = () => {

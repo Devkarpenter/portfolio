@@ -13,13 +13,13 @@ function Projects() {
           <img src={work1} alt="Chat App" />
           <p className='pro-name'>Chat App</p>
         </a>
-        <a href="https://school-list-app.vercel.app/" className="work__img">
+        <a href="https://www.washniron.com/" className="work__img">
           <img src={work6} alt="Edunify" />
-          <p className='pro-name'>Edunify School Management</p>
+          <p className='pro-name'>Wash N Iron</p>
         </a>
-        <a href="https://github.com/Devkarpenter/MERN-project" className="work__img">
+        <a href="https://web-portal-two.vercel.app/" className="work__img">
           <img src={work5} alt="MERN Project" />
-          <p className='pro-name'>MERN Project</p>
+          <p className='pro-name'>Web Portal</p>
         </a>
       </div>
     </section>
