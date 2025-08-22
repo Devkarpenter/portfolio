@@ -9,7 +9,7 @@ function Home() {
           I'm <span className="home__title-color">Devesh karpentar</span><br />
           Web Developer
         </h1>
-        <a href="#contact" className="button">Contact</a>
+        <a href="#contact" className="button">Hire Me</a>
       </div>
 
       <div className="home__social">

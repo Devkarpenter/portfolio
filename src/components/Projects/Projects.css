@@ -1,79 +1,69 @@
-/* Projects.css */
-
-.section {
+.work {
   padding: 4rem 2rem;
+  text-align: center;
 }
 
-
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 4px;
-  background-color: #00bcd4;
-  display: block;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .work__container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  justify-items: center;
 }
 
-.work__img {
-  /* position: relative; */
-  display: block;
-  border-radius: 12px;
+.project-card {
+  background: #05142a;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: #222;
-  background-color: #fff;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.work__img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.work__img p {
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  background-color: #ffffff;
-}
-
-.work__img:hover {
+.project-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.work__img:hover img {
-  transform: scale(1.05);
+.project-img-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
-
-
-/* Responsive Layout */
-@media (min-width: 600px) {
-  .work__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 992px) {
-  .work__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.project-card:hover .project-img {
+  transform: scale(1.1);
+}
 
-  .work__img p {
-    font-size: 1.2rem;
-  }
+.project-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #eceaea;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
 }
