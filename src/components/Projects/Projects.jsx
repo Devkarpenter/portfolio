@@ -1,47 +1,70 @@
 import './Projects.css';
-import work1 from '../../assets/img/work1.jpg';
-import work5 from '../../assets/img/work5.jpg';
-import work6 from '../../assets/img/work6.jpg';
 
 function Projects() {
   const projects = [
     {
-      href: "https://chat-app-blue-tau-81.vercel.app/login",
-      img: work1,
-      alt: "Chat App",
-      title: "Chat App",
-      desc: "A real-time chat application built with MERN stack and Socket.io for instant messaging."
+      title: "Trolley E-Commerce Website",
+      link: "https://trolley-web.vercel.app/",
+      stack: ["Next.js", "MongoDB", "JWT", "Google Auth", "Framer Motion"],
+      bullets: [
+        "Developed a full-stack e-commerce trolley application using Next.js.",
+        "Implemented Google authentication and JWT-based secure authorization.",
+        "Built backend APIs and integrated MongoDB for data persistence.",
+        "Implemented cart functionality, protected routes, and user sessions.",
+        "Added smooth animations and transitions using Framer Motion."
+      ]
     },
     {
-      href: "https://www.washniron.com/",
-      img: work6,
-      alt: "Wash N Iron",
-      title: "Wash N Iron",
-      desc: "An online laundry service platform that allows users to schedule pickups and deliveries."
+      title: "Real-Time Chat Application",
+      link: "https://chat-app-blue-tau-81.vercel.app/login",
+      stack: ["React.js", "Supabase", "Real-time", "Vercel"],
+      bullets: [
+        "Built a real-time chat application to enable instant messaging between users.",
+        "Implemented real-time messaging using Supabase backend services.",
+        "Handled authentication and protected routes for secure access.",
+        "Deployed the application on Vercel with GitHub integration."
+      ]
     },
     {
-      href: "https://web-portal-two.vercel.app/",
-      img: work5,
-      alt: "Web Portal",
-      title: "Web Portal",
-      desc: "A multi-role portal built using MERN stack with authentication and dashboard features."
-    }
+      title: "Wash N Iron (Client UI Project)",
+      link: "https://www.washniron.com/",
+      stack: ["React.js", "Tailwind CSS", "Responsive UI"],
+      bullets: [
+        "Developed a clean and responsive frontend UI for a laundry service platform.",
+        "Built reusable components using React.js and Tailwind CSS.",
+        "Focused on mobile responsiveness and user-friendly design.",
+        "Delivered the project as a frontend-only solution for a client."
+      ]
+    },
+    
   ];
 
   return (
-    <section className="work section" id="Projects">
+    <section className="projects section" id="Projects">
       <h2 className="section-title">Projects</h2>
-      <div className="work__container">
+
+      <div className="projects__container">
         {projects.map((p, i) => (
-          <a href={p.href} key={i} className="project-card" target="_blank" rel="noopener noreferrer">
-            <div className="project-img-container">
-              <img src={p.img} alt={p.alt} className="project-img"/>
+          <div className="project-card" key={i}>
+            <div className="project-header">
+              <h3>{p.title}</h3>
+              <a href={p.link} target="_blank" rel="noopener noreferrer">
+                Live Demo →
+              </a>
             </div>
-            <div className="project-content">
-              <h3 className="project-title">{p.title}</h3>
-              <p className="project-desc">{p.desc}</p>
+
+            <div className="project-stack">
+              {p.stack.map((tech, idx) => (
+                <span key={idx} className="stack-pill">{tech}</span>
+              ))}
             </div>
-          </a>
+
+            <ul className="project-points">
+              {p.bullets.map((b, idx) => (
+                <li key={idx}>{b}</li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </section>
@@ -49,3 +72,6 @@ function Projects() {
 }
 
 export default Projects;
+
+
+

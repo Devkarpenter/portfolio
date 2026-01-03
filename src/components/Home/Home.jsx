@@ -1,5 +1,6 @@
 import './Home.css';
 
+
 function Home() {
   return (
     <section className="home bd-grid" id="home">
@@ -17,7 +18,15 @@ function Home() {
         <a href="https://mail.google.com/mail/u/0/#sent?compose=new" className="home__social-icon"><i className="fa-solid fa-at"></i></a>
         <a href="https://github.com/Devkarpenter" className="home__social-icon"><i className="fa-brands fa-github"></i></a>
       </div>
+
+      {/* Image Section
+      <div className="home__img">
+        <img src={profileImg} alt="Devesh Karpentar" />
+      </div> */}
+
+
     </section>
   );
 }
+
 export default Home;

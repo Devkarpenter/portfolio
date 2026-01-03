@@ -99,12 +99,7 @@ html {
   padding: 1rem;
 }
 
-.contact__input {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
+
 
 .footer {
   background-color: #191129;
