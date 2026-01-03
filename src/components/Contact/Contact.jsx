@@ -9,7 +9,7 @@ function Contact() {
       <div className="contact-strip">
         <div className="contact-strip-item">
           <span className="label">Email</span>
-          <a href="mailto:info@accinzia.com">info@accinzia.com</a>
+          <a href="mailto:info@accinzia.com">deveshkarpenter@gmail.com</a>
         </div>
 
         <div className="contact-strip-item">
