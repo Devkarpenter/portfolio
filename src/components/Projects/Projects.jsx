@@ -76,7 +76,7 @@ function Projects() {
   ];
 
   return (
-    <section className="projects-vertical" id="Projects">
+    <section className="projects-vertical" id="projects">
       <div className="projects-container">
         <h2 className="projects-title">Projects</h2>
 
