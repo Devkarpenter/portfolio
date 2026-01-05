@@ -84,32 +84,31 @@
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+  .nav {
+    padding: 0.6rem 1.2rem;
+  }
 
-
-  /* hide desktop menu */
   .nav-menu {
     position: absolute;
-    top: 130%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-15px);
-
-    width: 90vw;
-    max-width: 320px;
+    top: 120%;
+    left: 0;
+    right: 0;
 
     opacity: 0;
+    transform: translateY(-15px);
     pointer-events: none;
 
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(15, 23, 42, 0.92);
     backdrop-filter: blur(18px);
     border-radius: 22px;
-    padding: 1.4rem;
+    padding: 1.2rem;
 
     transition: all 0.35s ease;
   }
 
   .nav-menu.open {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
     pointer-events: auto;
   }
 
@@ -119,12 +118,6 @@
     gap: 1rem;
   }
 
-  /* hide logo on mobile */
-  .nav-logo {
-    display: none;
-  }
-
-  /* center hamburger */
   .nav-toggle {
     display: block;
   }
