@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
@@ -27,13 +28,18 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <nav className="nav">
-        {/* Logo / Name */}
+
+        {/* Logo */}
         <div className="nav-logo">DK</div>
 
-        {/* Menu */}
+        {/* Desktop + Mobile Menu */}
         <div className={`nav-menu ${menuOpen ? "open" : ""}`}>
           <ul className="nav-list">
             {sections.map((section) => (
@@ -43,7 +49,7 @@ function Header() {
                   className={`nav-link ${
                     activeLink === section ? "active" : ""
                   }`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
@@ -56,14 +62,16 @@ function Header() {
         <button
           className="nav-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle Menu"
         >
-          <RxHamburgerMenu />
+          {menuOpen ? <IoClose /> : <RxHamburgerMenu />}
         </button>
+
       </nav>
     </header>
   );
 }
 
 export default Header;
+
 
