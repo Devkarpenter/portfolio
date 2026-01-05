@@ -15,7 +15,7 @@ function Home() {
         >
           <h1 className="home__title">
             Hi,<br />
-            I'm <span className="home__title-color">Devesh Karpenter</span>
+            I'm <span className="home__title-color">Devesh Karpentar</span>
           </h1>
 
           <motion.h2

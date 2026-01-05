@@ -31,7 +31,7 @@ function About() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            I'm <span>Devesh Karpenter</span>
+            I'm <span>Devesh Karpentar</span>
           </motion.h3>
 
           <motion.p

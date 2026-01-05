@@ -19,7 +19,7 @@ function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2>Devesh Karpenter</h2>
+          <h2>Devesh Karpentar</h2>
           <p>Frontend / Full-Stack Developer (React • Next.js • MERN)</p>
         </motion.div>
 
@@ -87,7 +87,7 @@ function Footer() {
         transition={{ duration: 0.7, delay: 0.7 }}
         viewport={{ once: true }}
       >
-        <p>© {new Date().getFullYear()} Devesh Karpenter. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Devesh Karpentar</p>
       </motion.div>
     </footer>
   );
