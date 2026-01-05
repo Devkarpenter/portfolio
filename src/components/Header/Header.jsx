@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
@@ -10,7 +11,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200; // Offset for early highlight
+      const scrollPosition = window.scrollY + 220;
       let currentSection = "home";
 
       sections.forEach((id) => {
@@ -25,32 +26,28 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [sections]);
+  }, []);
 
-  // Toggle menu open/close
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Close menu when clicking a link
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
 
   return (
-    <header className="l-header">
-      <nav className="nav bd-grid">
-        <div
-          className={`nav__menu ${menuOpen ? "show-menu" : ""}`}
-          id="nav-menu"
-        >
-          <ul className="nav__list">
+    <header className="header">
+      <nav className="nav">
+
+        {/* Logo */}
+        <div className="nav-logo">DK</div>
+
+        {/* Desktop + Mobile Menu */}
+        <div className={`nav-menu ${menuOpen ? "open" : ""}`}>
+          <ul className="nav-list">
             {sections.map((section) => (
-              <li className="nav__item" key={section}>
+              <li key={section}>
                 <a
                   href={`#${section}`}
-                  className={`nav__link ${
-                    activeLink === section ? "active-link" : ""
+                  className={`nav-link ${
+                    activeLink === section ? "active" : ""
                   }`}
                   onClick={handleLinkClick}
                 >
@@ -61,24 +58,22 @@ function Header() {
           </ul>
         </div>
 
-        {/* Hamburger toggle button */}
-        <div
-          className="nav__toggle"
-          id="nav-toggle"
-          onClick={toggleMenu}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && toggleMenu()}
-          aria-label="Toggle menu"
+        {/* Hamburger */}
+        <button
+          className="nav-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
         >
-          <RxHamburgerMenu />
-        </div>
+          {menuOpen ? <IoClose /> : <RxHamburgerMenu />}
+        </button>
+
       </nav>
     </header>
   );
 }
 
 export default Header;
+
 
 
 
