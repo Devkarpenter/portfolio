@@ -9,6 +9,7 @@
   max-width: 1200px;
   margin: auto;
   padding: 0 1.5rem;
+  overflow-x: hidden;
 }
 
 .projects-title {
@@ -43,6 +44,7 @@
 
 .project-image-wrapper img {
   width: 100%;
+  display: block;
   border-radius: 18px;
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.65);
 }

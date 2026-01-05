@@ -29,6 +29,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent horizontal overflow across html as well */
+html {
+  overflow-x: hidden;
+}
+
+/* Make images layout-friendly by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* ===== ROOT ===== */
 #root {
   position: relative;
