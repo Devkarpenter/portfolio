@@ -28,8 +28,8 @@ function Contact() {
           {[
             {
               label: "Email",
-              value: "deveshkarpenter@gmail.com",
-              link: "mailto:deveshkarpenter@gmail.com",
+              value: "deveshkarpenter1998@gmail.com",
+              link: "mailto:deveshkarpenter1998@gmail.com",
             },
             { label: "Location", value: "Noida, India" },
             { label: "Availability", value: "Open to opportunities" },
