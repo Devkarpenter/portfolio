@@ -1,0 +1,105 @@
+/* ===== TECH STACK SECTION ===== */
+.tech-stack {
+  padding: 7rem 0;
+  position: relative;
+}
+
+/* ===== CONTAINER ===== */
+.tech-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== MARQUEE ===== */
+.marquee {
+  overflow: hidden;
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+/* subtle fade on edges */
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #020617, transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #020617, transparent);
+}
+
+/* ===== TRACK ===== */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 35s linear infinite;
+}
+
+/* pause on hover */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ===== ITEM ===== */
+.tech-item {
+  min-width: 160px;
+  height: 110px;
+  margin-right: 1.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tech-item svg {
+  font-size: 2.2rem;
+  color: #38bdf8;
+}
+
+.tech-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.35);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tech-item {
+    min-width: 130px;
+    height: 95px;
+  }
+
+  .tech-item svg {
+    font-size: 1.9rem;
+  }
+}
