@@ -1,146 +1,100 @@
-/* Home.css */
-
-#home {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
+/* ===== HERO SECTION ===== */
+.home {
   min-height: 100vh;
-  padding: 2rem 1rem;
-  /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-  color: #fff;
-  text-align: center;
-  /* position: relative; */
-  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* background:
+    radial-gradient(circle at top left, #1e3a8a40, transparent 40%),
+    radial-gradient(circle at bottom right, #6366f140, transparent 40%),
+    linear-gradient(135deg, #020617, #0b1120); */
 }
 
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* ===== CONTAINER ===== */
+.home-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Apply the animation */
-.home__data {
-  animation: slideInLeft 1s ease-out forwards;
-  opacity: 0; /* Start invisible before animation */
-}
-
+/* ===== TEXT ===== */
 .home__title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
-  animation: fadeInDown 1s ease-out;
+  font-size: 3rem;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
 .home__title-color {
-  color: #00bcd4;
+  color: #38bdf8;
 }
 
-.button {
+.home__role {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  color: #c7d2fe;
+  font-weight: 500;
+}
+
+/* ===== BUTTON ===== */
+.home-btn {
   display: inline-block;
-  background-color: #00bcd4;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 30px;
+  margin-top: 2rem;
+  padding: 0.8rem 2.2rem;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  color: #ffffff;
+  border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s ease-in-out;
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
-.button:hover {
-  background-color: #0097a7;
-}
-
+/* ===== SOCIAL ICONS ===== */
 .home__social {
-  margin-top: 2rem;
   display: flex;
-  gap: 1.5rem;
-  animation: fadeInUp 1.3s ease-out;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
-.home__social-icon {
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.home__social-icon:hover {
-  color: #00bcd4;
-}
-
-.home {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.home__social a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
   align-items: center;
-  gap: 2rem;
-  padding: 2rem;
+  justify-content: center;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
-.home__img img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover;
-  border: 0 4px 12px rgba(49, 30, 97, 0.2); /* Optional border */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+.home__social a:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-4px);
 }
 
-.home__img img:hover {
-  transform: scale(1.05);
-}
-
-
-
-/* Animations */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  #home {
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-between;
-    padding: 4rem 6rem;
-  }
-
-  .home__data {
-    flex: 1;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
   }
 
   .home__social {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
   }
 
   .home__title {
-    font-size: 3.5rem;
+    font-size: 2.3rem;
+  }
+
+  .home__role {
+    font-size: 1.3rem;
   }
 }

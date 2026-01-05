@@ -1,77 +1,93 @@
-/* About.css */
-
-.section {
-  padding: 4rem 2rem;
-  background-color: #100A1C;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  color: #fefefe;
-  text-align: center;
-  margin-bottom: 2rem;
-  /* position: relative; */
-}
-
-.section-title::after {
-  content: '';
-  width: 60px;
-  height: 4px;
-  background-color: #39dede;
-  display: block;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
+/* ===== ABOUT SECTION ===== */
 .about {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  padding: 6rem 0;
+  position: relative;
+  /* background:
+    radial-gradient(circle at top right, #6366f130, transparent 45%),
+    linear-gradient(135deg, #020617, #0b1120); */
 }
 
+/* ===== CONTAINER ===== */
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== TITLE ===== */
+.about-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  display: block;
+  margin-top: 0.6rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+}
+
+/* ===== CARD ===== */
+.about-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 2.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TEXT ===== */
 .about__subtitle {
-  font-size: 2rem;
-  color: #f3f3f4;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  animation: fadeInUp 1s ease-out;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.about__subtitle span {
+  color: #38bdf8;
 }
 
 .about__text {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: #b3b1b1;
-  animation: fadeInUp 1.3s ease-out;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #c7d2fe;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ===== TAGS ===== */
+.about-tags {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-/* Responsive */
+.about-tags span {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .section {
-    padding: 3rem 1.5rem;
+  .about-title {
+    font-size: 1.9rem;
   }
 
-  .section-title {
-    font-size: 2rem;
+  .about-card {
+    padding: 2rem;
   }
 
   .about__subtitle {
-    font-size: 1.5rem;
-  }
-
-  .about__text {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
+
