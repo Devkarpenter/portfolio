@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { motion } from "framer-motion";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -61,7 +62,7 @@ function Footer() {
               whileHover={{ scale: 1.12 }}
               transition={{ duration: 0.3 }}
             >
-              <i className="bx bxl-linkedin"></i>
+              <FaLinkedinIn />
             </motion.a>
 
             <motion.a
@@ -72,7 +73,7 @@ function Footer() {
               whileHover={{ scale: 1.12 }}
               transition={{ duration: 0.3 }}
             >
-              <i className="bx bxl-github"></i>
+              <FaGithub />
             </motion.a>
           </div>
         </motion.div>
@@ -93,6 +94,7 @@ function Footer() {
 }
 
 export default Footer;
+
 
 
 
