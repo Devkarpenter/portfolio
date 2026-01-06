@@ -55,7 +55,7 @@ function Footer() {
 
           <div className="footer-social">
             <motion.a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/devesh-karpentar-975309255/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -66,7 +66,7 @@ function Footer() {
             </motion.a>
 
             <motion.a
-              href="https://github.com/"
+              href="https://github.com/Devkarpenter"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
